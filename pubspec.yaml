@@ -54,6 +54,7 @@ dependencies:
   video_player: ^2.4.10
   qr_code_scanner:
   flutter_image_compress:
+  stop_watch_timer:
   provider: ^6.0.3
 
 

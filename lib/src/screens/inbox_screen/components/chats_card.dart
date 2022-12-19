@@ -87,9 +87,9 @@ class ChatCard extends StatelessWidget {
                   fontSize: 12,
                   // color: isDarkMode ? Colors.white : Colors.black87,
                   color: chat.msgTotal == 0
-                      ? kTextColor
+                      ? Colors.white
                       : isDarkMode
-                          ? kFreshPrimaryColor
+                          ? kBackgroundColor
                           : kSecondaryColor,
                 ),
               ),

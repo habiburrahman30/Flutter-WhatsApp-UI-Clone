@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/src/config/constants.dart';
 import 'package:whatsapp_clone/src/models/Chat.dart';
 import 'package:whatsapp_clone/src/screens/call_history_screen/call_screen.dart';
+import 'package:whatsapp_clone/src/screens/camera_screen/camera_page.dart';
 import 'package:whatsapp_clone/src/screens/camera_screen/camera_screen.dart';
 import 'package:whatsapp_clone/src/screens/contact_screen/contact_screen.dart';
 import 'package:whatsapp_clone/src/screens/inbox_screen/components/broadcast_screen.dart';
@@ -50,19 +51,22 @@ class _InboxScreenState extends State<InboxScreen>
                 IconButton(
                   icon:
                       Icon(Icons.camera_alt_outlined, color: kBackgroundColor),
+                  highlightColor: Colors.grey.withOpacity(.5),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CameraScreen(
-                          isCamTab: true,
-                        ),
+                        builder: (context) => CameraPage(),
+                        // builder: (context) => CameraScreen(
+                        //   isCamTab: true,
+                        // ),
                       ),
                     );
                   },
                 ),
                 IconButton(
                   icon: Icon(Icons.search, color: kBackgroundColor),
+                  highlightColor: Colors.grey.withOpacity(.5),
                   onPressed: () {
                     showSearch(context: context, delegate: CustomSearch());
                   },
@@ -224,7 +228,10 @@ class _InboxScreenState extends State<InboxScreen>
           children: [
             Column(
               children: [
-                Text('data'),
+                Text('Introducing communities'),
+                Text(
+                    'Easily organize your related groups and send announcements. Now, your communities, like neighborhoods or schools, can have their own space.'),
+                TextButton(onPressed: () {}, child: Text('Start a community')),
               ],
             ),
             ListView.builder(
